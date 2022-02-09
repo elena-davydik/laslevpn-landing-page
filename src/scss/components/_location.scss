@@ -1,0 +1,7 @@
+.location {
+    max-width: 1145px;
+    margin: 0 auto;
+    padding: 45px 15px;
+   
+    @include flexable(column, start, center, nowrap);
+}

@@ -1,0 +1,87 @@
+.footer__content{
+    max-width: 1145px;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include flexable(row, space-between, top, nowrap);
+}
+.footer {
+    padding-bottom: 75px;
+    background-color: $medium-color;
+
+    &__naming {
+        margin-bottom: 25px;
+        @include flexable(row, start, center, nowrap);
+    }
+
+    &__logo {
+        margin-right: 10px;
+    }
+
+    &__lasles {
+        @include font($medium, $md, 24px);
+        color: $primary-color;
+    }
+
+    &__vpn {
+        @include font($medium, $md, 24px);
+        color: $primary-color;
+    }
+
+    &__text {
+        max-width: 320px;
+        margin-bottom: 35px;
+        @include flexable(row, start, center, wrap);
+    }
+
+    &__laslevpn {
+        @include font($medium, $xs, 30px);
+        color: $secondary-color;
+    }
+
+    &__description {
+        @include font($regular, $xs, 30px);
+        color: $secondary-color;
+    }
+
+    &__social-networks-list {
+        display: flex;
+    }
+
+    &__social-networks-item {
+        margin: 0 5px;
+    }
+
+    &__copy {
+        @include font($medium, $xs, 30px);
+        color: $dark-color;
+    }
+}
+
+.footer-menu {
+    &__title {
+        @include font($medium, $sm, 30px);
+        color: $primary-color;
+    }
+
+    &__item {
+        @include font($regular, $xs, 30px);
+        color: $secondary-color;
+    }
+}
+
+@include md {
+    .footer {
+        &__content {
+            @include flexable(column, center, center, nowrap);
+        }
+
+        &__contacts {
+            @include flexable(column, center, center, nowrap);
+        }
+
+        &-menu {
+            display: none;
+        }
+    }
+    
+}

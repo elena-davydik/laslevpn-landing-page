@@ -1,0 +1,62 @@
+.subscription-container {
+    max-width: 1145px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.subscription {
+    padding: 60px 70px;
+    transform: translateY(-50%);
+
+    @include flexable(row, space-between, center, nowrap);
+    background-color: $white-color;
+    border-radius: 10px;
+
+    &__text {
+        max-width: 360px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        @include font($medium, $xl, 45px);
+        color: $primary-color;
+    }
+
+    &__subtitle {
+        margin-bottom: 20px;
+        @include font($regular, $xs, 30px);
+        color: $secondary-color;
+    }
+
+    &__link {
+        padding: 20px 65px;
+
+        @include font($bold, $xs, 25px);
+        color: $white-color;
+        text-align: center;
+
+        background-color: $accent-color;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(245, 56, 56, 0.35);
+    }
+}
+
+@include md {
+    .subscription {
+        padding: 30px 20px;
+        @include flexable(row, center, center, wrap);
+
+        &__title {
+            @include font($medium, $lg, 35px);
+        }
+
+        &__link {
+            padding: 20px 50px; 
+        }
+
+        &__text {
+            text-align: center;
+        }
+    }
+}
+

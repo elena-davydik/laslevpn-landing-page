@@ -1,0 +1,86 @@
+.statistics {
+    padding: 25px 15px;
+
+    &__container {
+        max-width: 1145px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        padding: 37px 0;
+        @include flexable(row, center, center, nowrap);
+        background-color: $white-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+    }
+}
+
+.details {
+    height: 125px;
+    @include flexable(row, center, center, wrap);
+    flex-grow: 1;
+
+    &__data {
+        margin-left: 35px;
+        text-align: left;
+    }
+
+    &__amount {
+        @include font($bold, $lg, 30px);
+        color: $primary-color;
+    }
+
+    &__indicator {
+        @include font($regular, $md, 30px);
+        color: $secondary-color;
+    }
+}
+
+.statistics__content > figure:not(:last-child) {
+    border-right: 2px solid $medium-color;
+}
+
+@include md {
+    .statistics__content {
+        padding: 20px 15px;
+    }
+
+    .details {
+        &__data {
+            margin-left: 20px;
+        }
+
+        &__amount {
+            @include font($bold, $md, 28px);
+        }
+
+        &__indicator {
+            @include font($regular, $xs, 28px);
+        }
+    }
+}
+@include sm {
+    .details {
+        @include flexable(column, center, center, nowrap);
+        text-align: center;
+
+        &__icon {
+            margin-bottom: 15px;
+        }
+
+        &__data {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+}
+
+@include xs {
+    .details {
+        height: 50px;
+
+        &__icon {
+            display: none;
+        }
+    }
+}

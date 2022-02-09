@@ -1,0 +1,155 @@
+.testimonials {
+    padding: 0 15px 130px 15px;
+    @include flexable(column, center, center, nowrap);
+    
+    &__container {
+        max-width: 1145px;
+        margin: 0 auto;
+    }
+}
+
+// ------------ FEEDBACKS ------------\\
+
+.feedbacks {
+    max-width: 1145px;
+    position: relative;
+    overflow: hidden;
+    @include flexable(row, left, center, nowrap);
+}
+
+.feedback-card {
+    min-width: 400px;
+    height: 230px;
+    padding: 30px;
+    margin: 0 25px;
+
+    @include flexable(column, center, center, nowrap);
+
+    border: 2px solid $border-card-color;
+    border-radius: 10px;
+
+    &--active {
+        border-color: $accent-color;
+    }
+
+    &__head {
+        @include flexable(row, start, center, nowrap); 
+    }
+
+    &__person {
+        width: 235px;
+        padding: 0 10px;
+    }
+
+    &__name {
+        @include font($medium, $sm, 30px);
+        color: $primary-color;
+    }
+
+    &__location {
+        @include font($regular, $xs, 30px);
+        color: $secondary-color;
+    }
+
+    &__rating {
+        @include flexable(row, start, center, nowrap); 
+    }
+
+    &__star {
+        padding: 5px;
+    }
+
+    &__text {
+        max-width: 340px;
+        min-height: 110px;
+        @include font($regular, $xs, 30px);
+        color: $primary-color;
+    }
+}
+
+@include lg {
+    .feedbacks :nth-child(3) {
+        display: none;
+    }
+
+    .feedbacks {
+        max-width: 992px;
+        @include flexable(row, center, center, nowrap);
+    }
+
+    .feedback-card {
+        min-width: 350px;
+        padding: 15px;
+        margin: 10px;
+    }
+}
+
+@include md {
+    .feedbacks :nth-child(2) {
+        display: none;
+    }
+}
+
+@include xs {
+    .feedback-card {
+        max-width: 350px;
+        padding: 10px; 
+    }
+}
+
+// ------------ SLIDER ------------\\
+
+.slider {
+    padding: 60px 15px;
+    @include flexable(row, space-between, center, nowrap); 
+
+    &__container {
+        max-width: 1145px;
+    }
+
+    &__points {
+        @include flexable(row, start, center, nowrap); 
+    }
+    
+    &__point {
+        width: 15px;
+        height: 15px;
+        margin: 0 8px;
+    
+        border: none;
+        border-radius: 50px;
+    
+        &--active {
+            width: 45px;
+            background-color: $accent-color;
+        }
+    }
+    
+    &__buttons {
+        @include flexable(row, center, center, nowrap);
+    }
+    
+    &__button {
+        width: 60px;
+        height: 60px;
+        margin: 0 8px;
+
+        background: $light-color;
+        border: 2px solid $accent-color;
+        border-radius: 50px;
+        
+        &--active {
+            background: $accent-color;
+        }
+    }
+    
+    &__arrow {
+        width: 20px;
+        height: 17px;
+        transform: translate(50%);
+    }
+
+} 
+
+
+

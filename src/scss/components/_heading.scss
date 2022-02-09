@@ -1,0 +1,49 @@
+.heading {
+    max-width: 520px;
+    width: 100%;
+    padding: 95px 0;
+    
+    @include flexable(column, center, center, wrap);
+    text-align: center;
+
+    &__title {
+        max-width: 415px;
+        width: 100%;
+        margin-bottom: 30px;
+
+        @include font($medium, $xl, 50px);
+        color: $primary-color;
+    }
+
+    &__subtitle {
+        @include font(400, 16px, 30px);
+        color: $secondary-color;
+    }
+}
+
+@include lg {
+    .heading {
+        padding: 70px 0;
+    }
+}
+
+@include md {
+    .heading {
+        padding: 40px 0;
+
+        &__title {
+            @include font($medium, $lg, 42px);
+        }
+    }
+}
+
+@include sm {
+    .heading {
+        padding: 20px 0;
+
+        &__title {
+            margin-bottom: 20px;
+            @include font($medium, $lg, 35px);
+        }
+    }
+}

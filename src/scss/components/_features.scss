@@ -1,0 +1,95 @@
+.features {
+    padding: 80px 15px 130px 15px;
+
+    background: no-repeat url(../assets/images/features.png);
+    background-position-x: left;
+    background-position-y: 20%;
+    
+    @include flexable(row, right, center, wrap);
+
+    &__container {
+        max-width: 1145px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        max-width: 430px;
+        width: 100%;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        @include font($medium, $xl, 50px);
+        color: $primary-color;
+    }
+
+    &__subtitle {
+        margin-bottom: 30px;
+        @include font($regular, $xs, 30px);
+        color: $secondary-color;
+    }
+
+    &__items {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        @include flexable(row, left, stretch, nowrap);
+        @include font($regular, $xxs, 30px);
+        color: $secondary-color;
+        text-align: left;
+        list-style-type: none;
+    }
+
+    &__item:before {
+        content: url(../assets/icons/list-style.png);
+   }
+}   
+
+@include lg {
+    .features {
+        padding: 50px 15px;
+        background-size: 50%;
+    }
+}
+
+@include md {
+    .features {
+        padding: 30px 15px;
+        @include flexable(row, center, center, wrap);
+        background: none;
+        
+        &__container {
+            min-width: 100%;
+            text-align: center;
+        }
+
+        &__title {
+            @include font($medium, $lg, 56px);
+        }
+
+        &__items {
+            height: 100%;
+            margin-left: 30px;
+            flex-grow: 1;
+            columns: 2;
+        }
+    }
+}
+
+@include sm {
+    .features {
+        padding: 20px 15px;
+        &__title {
+             @include font($medium, $lg, 35px);
+        }
+    }
+}
+
+@include xs {
+    .features__items {
+        @include flexable(column, center, left, nowrap);
+        columns: 1;
+    }
+}

@@ -1,0 +1,107 @@
+.header__container {
+    max-width: 1145px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include flexable(row, space-between, center, nowrap);
+}
+
+.header {
+    padding: 45px 0;
+    background: $light-color;
+    
+    &__logo {
+        width: 148px;
+        @include flexable(row, space-between, center, no wrap);
+    }
+
+    &__img {
+        width: 35px;
+        height: 36px;
+    }
+
+    &__naming {
+        @include font($medium, $md, 24px);
+        color: $primary-color;
+    }
+
+    &__link {
+        margin: 0 20px;
+        @include font($regular, $xs, 19px);
+        color: $secondary-color;
+    }
+
+    &__enter {
+        width: 235px;
+        @include flexable(row, space-between, center, nowrap);
+    }
+
+    &__sign-in {
+        @include font(500, 16px, 19px);
+    }
+
+    &__sign-up {
+        padding: 10px 45px;
+        @include font($medium, $xs, 19px);
+        color: $accent-color;
+        border: solid 1px $accent-color;
+        border-radius: 50px;
+    } 
+}
+
+.login-link {
+    padding: 5px 15px;
+    display: none;
+
+    @include font($medium, $xs, 19px);
+    color: $accent-color;
+    text-align: center;
+
+    border: solid 1px $accent-color;
+    border-radius: 50px;
+}
+
+.burger-menu {
+    padding: 10px 15px;
+    display: none;
+
+    @include font($medium, $xs, 19px);
+    color: $accent-color;
+
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+@include lg {
+    .header__enter {
+        display: none;
+    }
+
+    .login-link {
+        display: block;
+    }
+}
+
+@include md {
+    .header {
+        padding: 30px 0;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .login-link {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+@include sm {
+    .header {
+        padding: 25px 0;
+    }
+}

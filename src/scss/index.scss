@@ -1,0 +1,23 @@
+/* CONFIG */
+@import "./config/reset";
+@import "./config/variables";
+@import "./config/base";
+@import "./config/mixins";
+
+
+
+/* COMPONENTS */
+@import "./components/header";
+@import "./components/hero";
+@import "./components/statistics";
+@import "./components/features";
+@import "./components/heading";
+@import "./components/products";
+@import "./components/location";
+@import "./components/sponsored";
+@import "./components/testimonials";
+@import "./components/subscription";
+@import "./components/footer";
+
+
+

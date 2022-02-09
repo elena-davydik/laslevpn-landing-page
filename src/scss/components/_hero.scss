@@ -1,0 +1,78 @@
+.hero {
+    @include flexable(column, left, start, nowrap);
+
+    background: no-repeat url(../assets/images/hero.png);
+    background-position-x: right;
+    background-position-y: center;
+
+    &__container {
+        max-width: 1145px;
+        margin: 0 auto;
+        padding: 90px 15px;
+    }
+
+    &__content {
+        max-width: 530px;
+        width: 100%;
+    }
+    
+    &__title {
+        margin-bottom: 30px;
+        @include font($medium, $xxl, 70px);
+        color: $primary-color
+    }
+
+    &__subtitle {
+        margin-bottom: 55px;
+        @include font($regular, $xs, 30px);
+        color: $secondary-color;
+    }
+
+    &__link {
+        padding: 15px 80px;
+
+        @include font($medium, $xs, 19px);
+        color: $white-color;
+
+        background-color: $accent-color;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(245, 56, 56, 0.35);
+    }
+}
+
+@include lg {
+    .hero {
+        background-size: 50%;
+    }
+}
+
+@include md {
+    .hero {
+        padding: 30px 15px;
+        background: none;
+        
+        &__content {
+            min-width: 100%;
+            @include flexable(column, center, center, wrap);
+            text-align: center;
+        }
+
+        &__title {
+            @include font($medium, $lg, 56px);
+        }
+    }  
+}
+
+@include sm {
+    .hero {
+        padding: 20px 15px;
+        
+        &__title {
+            @include font($medium, $lg, 35px);
+        }
+        
+        &__subtitle {
+            margin-bottom: 30px;
+        }
+    }
+}
