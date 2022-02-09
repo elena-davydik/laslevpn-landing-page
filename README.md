@@ -14,4 +14,4 @@
 
 <img src="preview.png">
 
-[demo](https://elena-davydik.github.io/laslevpn-landing-page/)
+[DEMO](https://elena-davydik.github.io/laslevpn-landing-page/)
